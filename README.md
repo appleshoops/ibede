@@ -1,3 +1,3 @@
 # ibede
 
-A new Flutter project.
+Funny app that gets space images from nasa
