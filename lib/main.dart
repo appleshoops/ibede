@@ -12,6 +12,9 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData( 
+        fontFamily: 'Ubuntu'
+      ),
       home: Scaffold(
         backgroundColor:  const Color.fromARGB(255, 37, 37, 37),
         appBar: AppBar(

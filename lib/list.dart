@@ -36,7 +36,12 @@ class _ApodListState extends State<ApodList> {
                   children: [
                     Image.network(apod.imageUrl),
                     ListTile(
-                      title: Text(apod.title),
+                      title: Text(
+                        apod.title,
+                        style: const TextStyle(
+                          
+                        ),
+                        ),
                       subtitle: Text(apod.date),
                     ),
                     Padding(
