@@ -1,4 +1,7 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'model.dart';
 import 'list.dart';
 

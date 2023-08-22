@@ -34,19 +34,35 @@ class _ApodListState extends State<ApodList> {
               return Card(
                 child: Column(
                   children: [
-                    Image.network(apod.imageUrl),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image.network(
+                      apod.imageUrl
+                      ),
+                    ),
                     ListTile(
                       title: Text(
                         apod.title,
                         style: const TextStyle(
-                          
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30
                         ),
                         ),
-                      subtitle: Text(apod.date),
+                      subtitle: Text(
+                        apod.date,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20
+                        ),),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(apod.description),
+                      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                      child: Text(
+                        apod.description,
+                        style: const TextStyle(
+                          fontSize: 15
+                        ),
+                      ),
                     ),
                   ],
                 ),
