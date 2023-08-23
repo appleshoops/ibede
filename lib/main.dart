@@ -2,11 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:ibede/themeProvider.dart';
 import 'model.dart';
 import 'list.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(ChangeNotifierProvider<ThemeProvider>(child: const MainApp()));
 }
 
 class MainApp extends StatelessWidget {
@@ -15,9 +16,9 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData( 
-        fontFamily: 'Ubuntu'
-      ),
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
       home: Scaffold(
         backgroundColor:  const Color.fromARGB(255, 37, 37, 37),
         appBar: AppBar(
