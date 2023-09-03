@@ -18,7 +18,7 @@ class _ApodListState extends State<ApodList> {
   @override
   void initState() {
     super.initState();
-    _apodList = widget.model.getApodList(10);
+    _apodList = widget.model.getApodList(15);
   }
 
   @override

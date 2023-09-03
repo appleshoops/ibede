@@ -1,13 +1,13 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, duplicate_import
 
 import 'package:flutter/material.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:ibede/themeProvider.dart';
 import 'model.dart';
 import 'list.dart';
+import 'theme.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider<ThemeProvider>(child: const MainApp()));
+  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -16,11 +16,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+      theme: ThemeClass.lightTheme,
+      darkTheme: ThemeClass.darkTheme,
       themeMode: ThemeMode.system,
       home: Scaffold(
-        backgroundColor:  const Color.fromARGB(255, 37, 37, 37),
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Row(
